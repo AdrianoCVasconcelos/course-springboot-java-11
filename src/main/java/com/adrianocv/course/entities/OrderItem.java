@@ -46,6 +46,10 @@ public class OrderItem implements Serializable {
 		id.setProduct(product);
 	}
 	
+	public Double getSubTotal() {
+		return price * quantity;
+	}
+	
 	public Integer getQuantity() {
 		return quantity;
 	}
@@ -55,9 +59,10 @@ public class OrderItem implements Serializable {
 	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(Double price) {
+	public void SetPrice(Double price) {
 		this.price = price;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
